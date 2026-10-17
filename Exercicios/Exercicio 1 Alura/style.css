@@ -20,31 +20,29 @@ body{
     align-items: center;
 }
 header{
-    align-self: stretch;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
 }
 header img{
-    padding-top: 30px;
+    padding: 20px;
+    
 }
 header span{
     background-color: #0E1014;
     border-radius : 50%;
     width: 40px;
     height: 40px;
+    margin: 20px;
+    padding: 8px;
 }
-header span:hover{
-    background-color: #eaecf1;
-    
-}
-
-
 main{
     display: flex;   
     flex-direction: column;
     height: 670.61px;
     width: 341px ;
-}
-    
+}  
     
 span{
     color: var(--roxo-destaque);
@@ -90,3 +88,15 @@ a.botom:hover{
     background-color: var(--roxo-hover);
 }
 
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;       /* Muda os itens de coluna para linha (lado a lado) */
+        justify-content: space-between; /* Espalha os itens (ex: logo na esquerda, menu na direita) */
+        align-items: center;       /* Centraliza os itens verticalmente na linha */
+        padding: 20px 40px;        /* Aumenta o espaçamento nas telas grandes */
+    }
+
+    header img {
+        padding-top: 0;            /* Remove o padding do topo que era do celular */
+    }
+}
